@@ -37,12 +37,11 @@ const Lists = () => {
             placeholder="Enter city"
             type="search"
             {...register("search")}
-            onKeyDown={(e) => e.key === "Enter" && handleSubmit(onSubmit)()}
           />
           <Button type="submit">Add</Button>
         </HStack>
 
-        {errors.search && <Text>{errors.search.message}</Text>}
+        {errors.search && <Text color="red">{errors.search.message}</Text>}
       </form>
 
       <Stack gap="4" direction="row" wrap="wrap" justifyContent="center">
