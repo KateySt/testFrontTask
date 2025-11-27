@@ -27,7 +27,7 @@ const ChartWithTabs = ({ data }: Props) => {
           {pages.map((_, index) => (
             <Tabs.Trigger key={index} value={index.toString()}>
               {new Date(pages[index][0].dt_txt).getDate()}-
-              {new Date(pages[index][pages.length - 1].dt_txt).getDate()}
+              {new Date(pages[index][pages[index].length - 1].dt_txt).getDate()}
             </Tabs.Trigger>
           ))}
         </Tabs.List>
