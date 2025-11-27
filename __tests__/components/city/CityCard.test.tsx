@@ -1,5 +1,5 @@
 import React from "react";
-import { CityCard } from "@/components/card/CityCard";
+import CityCard from "@/components/card/CityCard";
 import { removeCity } from "@/store/city/citySlice";
 import userEvent from "@testing-library/user-event";
 import * as redux from "@/store/hooks";

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { CityCard } from "@/components/card/CityCard";
+import CityCard from "@/components/card/CityCard";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { addCity } from "@/store/city/citySlice";
 import { Button, HStack, Input, Stack, Text } from "@chakra-ui/react";

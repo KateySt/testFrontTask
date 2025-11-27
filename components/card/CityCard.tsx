@@ -14,7 +14,7 @@ type Props = {
   variant?: "subtle" | "outline" | "elevated";
 };
 
-export function CityCard({ city, variant = "elevated" }: Props) {
+export default function CityCard({ city, variant = "elevated" }: Props) {
   const { data, error, isFetching, refetch } = useGetCityWeatherQuery(city);
   const router = useRouter();
   const dispatch = useAppDispatch();
