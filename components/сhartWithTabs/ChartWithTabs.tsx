@@ -1,4 +1,5 @@
 "use client";
+
 import { SimpleGrid, Tabs } from "@chakra-ui/react";
 import Chart from "@/components/chart/Chart";
 import { WeatherItem } from "@/type";

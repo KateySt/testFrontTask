@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Table from "@/components/table/TableBase";
 import { useGetCityForecastQuery } from "@/store/services/weather";
@@ -13,7 +14,7 @@ const Detail = ({ city }: Props) => {
   const { data, error, isLoading } = useGetCityForecastQuery(city);
 
   if (isLoading) return <Spinner />;
-  if (error) return <Text>Error loading weather</Text>;
+  if (error) return <Text color="red">Error loading weather</Text>;
   if (!data) return <Text>No data</Text>;
 
   const rows = data.list.map((weatherItem) => [
