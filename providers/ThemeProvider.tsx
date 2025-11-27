@@ -1,6 +1,6 @@
 "use client";
 
-import { Stack, Switch } from "@chakra-ui/react";
+import { HStack, Stack, Text, Switch } from "@chakra-ui/react";
 import { useColorMode } from "@/components/ui/color-mode";
 import React from "react";
 
@@ -14,11 +14,16 @@ const ThemeProvider = ({ children }: Props) => {
 
   return (
     <Stack gap="2">
-      <Switch.Root checked={isDark} onCheckedChange={toggleColorMode}>
-        <Switch.HiddenInput />
-        <Switch.Control />
-        <Switch.Label>Toggle Mode</Switch.Label>
-      </Switch.Root>
+      <HStack justifyContent="space-between">
+        <Text fontSize="2xl" fontWeight="bold">
+          Web-app
+        </Text>
+        <Switch.Root checked={isDark} onCheckedChange={toggleColorMode}>
+          <Switch.HiddenInput />
+          <Switch.Control />
+          <Switch.Label>Toggle Mode</Switch.Label>
+        </Switch.Root>
+      </HStack>
       {children}
     </Stack>
   );

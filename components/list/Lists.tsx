@@ -46,9 +46,11 @@ const Lists = () => {
       </form>
 
       <Stack gap="4" direction="row" wrap="wrap" justifyContent="center">
-        {cities.map((city) => (
-          <CityCard key={city} city={city} />
-        ))}
+        {cities.length > 0 ? (
+          cities.map((city) => <CityCard key={city} city={city} />)
+        ) : (
+          <Text>No cities added</Text>
+        )}
       </Stack>
     </Stack>
   );

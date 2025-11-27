@@ -100,6 +100,6 @@ describe("Lists Component", () => {
 
     render(<Lists />);
 
-    expect(screen.queryAllByTestId("city-card")).toHaveLength(0);
+    expect(screen.getByText(/No cities added/i)).toBeInTheDocument();
   });
 });
